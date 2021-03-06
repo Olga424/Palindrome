@@ -1,3 +1,5 @@
+package com.game.palindrome;
+
 import com.game.palindrome.PalindromeController;
 import com.game.palindrome.PalindromeService;
 import com.game.palindrome.UserService;
@@ -27,7 +29,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
-
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class PalindromeControllerTest {
 
     @Mock
