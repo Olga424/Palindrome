@@ -38,18 +38,14 @@ public class PalindromeControllerTest {
 
     @Test
     public void returnTrue_ifSuccessfullyGetScores() throws Exception {
-
         mockMvc.perform(get("/palindrome/scores"))
                 .andExpect(status().isOk()).andReturn();
-
     }
 
     @Test
     public void returnTrue_ifSuccessfullyEnterPalindrome() throws Exception {
-
         mockMvc.perform(post("/palindrome/play/{username}/{string}", "Andrew", "madam"))
                 .andExpect(status().isOk()).andReturn();
-
     }
 
 }
