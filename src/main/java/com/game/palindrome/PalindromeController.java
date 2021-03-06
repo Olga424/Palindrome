@@ -32,7 +32,7 @@ public class PalindromeController {
             if (palindromeService.isUniquePalindrome(palindromesTable, string)) {
                 palindromesTable.put(string, username);
             } else {
-                return new ResponseEntity<>("ALREADY IN USE. TRY AGAIN", HttpStatus.OK);
+                return new ResponseEntity<>("Already in use. Try again", HttpStatus.OK);
             }
 
             userService.registerUser(scoreTable, username);
@@ -41,10 +41,10 @@ public class PalindromeController {
             int totalScore = userService.calculateScore(currentScore,string);
             scoreTable.put(username, totalScore);
 
-            return new ResponseEntity<>("CONGRATULATIONS" + username + "You earned " + string.length() / 2 + "points. Your score is" + totalScore, HttpStatus.OK);
+            return new ResponseEntity<>("Good job " + username + "! You earned " + string.length() / 2 + " points. Your score is" + totalScore, HttpStatus.OK);
         }
 
-        return new ResponseEntity<>("NOT A PALIDROME", HttpStatus.OK);
+        return new ResponseEntity<>("Not a palindrome. Try again", HttpStatus.OK);
     }
 
     @GetMapping("/scores")
