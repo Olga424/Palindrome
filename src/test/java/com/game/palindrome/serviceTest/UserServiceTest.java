@@ -1,5 +1,6 @@
-package com.game.palindrome;
+package com.game.palindrome.serviceTest;
 
+import com.game.palindrome.service.UserService;
 import org.junit.Assert;
 import org.junit.Test;
 

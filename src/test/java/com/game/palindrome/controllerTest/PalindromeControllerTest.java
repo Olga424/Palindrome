@@ -1,5 +1,8 @@
-package com.game.palindrome;
+package com.game.palindrome.controllerTest;
 
+import com.game.palindrome.controller.PalindromeController;
+import com.game.palindrome.service.PalindromeService;
+import com.game.palindrome.service.UserService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,6 +12,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -44,7 +48,8 @@ public class PalindromeControllerTest {
 
     @Test
     public void returnTrue_ifSuccessfullyEnterPalindrome() throws Exception {
-        mockMvc.perform(post("/palindrome/play/{username}/{string}", "Andrew", "madam"))
+
+        MvcResult mvcResult = mockMvc.perform(post("/palindrome/play/{username}/{string}", "Andrew", "madam"))
                 .andExpect(status().isOk()).andReturn();
     }
 

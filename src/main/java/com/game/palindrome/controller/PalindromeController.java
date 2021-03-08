@@ -1,5 +1,7 @@
-package com.game.palindrome;
+package com.game.palindrome.controller;
 
+import com.game.palindrome.service.PalindromeService;
+import com.game.palindrome.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.game.palindrome;
+package com.game.palindrome.service;
 
 import org.springframework.stereotype.Service;
 
