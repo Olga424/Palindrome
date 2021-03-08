@@ -49,7 +49,7 @@ public class PalindromeControllerTest {
     @Test
     public void returnTrue_ifSuccessfullyEnterPalindrome() throws Exception {
 
-        MvcResult mvcResult = mockMvc.perform(post("/palindrome/play/{username}/{string}", "Andrew", "madam"))
+        MvcResult mvcResult = this.mockMvc.perform(post("/palindrome/play/{username}/{string}", "Andrew", "madam"))
                 .andExpect(status().isOk()).andReturn();
     }
 

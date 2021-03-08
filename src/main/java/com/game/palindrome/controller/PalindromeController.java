@@ -18,7 +18,9 @@ public class PalindromeController {
     private final UserService userService;
     private final PalindromeService palindromeService;
 
+    /* returns HashMap of all entered palindromes */
     Map<String, String> palindromesTable = new HashMap<>();
+    /* returns HashMap of all users and their total score */
     Map<String, Integer> scoreTable = new HashMap<>();
 
     public PalindromeController(UserService userService, PalindromeService palindromeService) {
@@ -29,14 +31,17 @@ public class PalindromeController {
     @PostMapping("/play/{username}/{string}")
     public ResponseEntity<String> enterPalindrome(@PathVariable("username") String username, @PathVariable("string") String string) {
 
+        /*check if the word is a palindrome*/
         if (palindromeService.isPalindrome(string)) {
 
+            /*check if the word was already used by another user*/
             if (palindromeService.isUniquePalindrome(palindromesTable, string)) {
                 palindromesTable.put(string, username);
             } else {
                 return new ResponseEntity<>("Already in use. Try again", HttpStatus.OK);
             }
 
+            /*add the username and his/her points into Map<String, Integer> scoreTable */
             userService.registerUser(scoreTable, username);
 
             int currentScore = scoreTable.get(username);
