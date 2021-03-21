@@ -17,4 +17,4 @@ The programme can be tested with help of the unit tests from PalindromeServiceTe
              C. returns the congratulation message as well as the number of earned points for this round and total score if the entered word is a palindrome.\
 * GET-method: http://localhost:8080/palindromme/scores
 \
-            returns the total score table of all players sorted by the number of points(descending).
+            returns the total score table of all players sorted by the number of points (descending).
