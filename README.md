@@ -1,12 +1,12 @@
 # Palindrome game
 A REST application implementing a child's game "Palindrome".\
-The technology used: Java + Spring Boot + Maven + JUnit.\
+The technology used: Java + Stream + Spring Boot + Maven + JUnit.\
 \
 The Game Description:
 * The number of players is unlimited.
 * Each player enters a word which he/she considers a palindrome.
 * A word can be used only one time per a round.
-* The player gained the biggest number of points is the winner.
+* The player gained the biggest number of points becomes the winner.
 
 \
 The programme can be tested with help of the unit tests from PalindromeServiceTest and UserServiceTest classes, as well as via Postman with the following commands:
