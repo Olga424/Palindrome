@@ -12,9 +12,9 @@ The Game Description:
 The programme can be tested with help of the unit tests from PalindromeServiceTest and UserServiceTest classes, as well as via Postman with the following commands:
 * POST-method: http://localhost:8080/palindromme/play/{username}/{string}
 \
-             A. returns the message "Not a palindrome. Try again" if the entered word is not a palindrome;\
+             A. returns the message "Not a palindrome. Try again" if the entered word is not a palindrome;
              B. returns the message "Already in use. Try again" if the entered word is a palindrome but already used by another player;\
-             C. returns the congratulation message as well as the number of earned points for this round and total score if the entered word is a palindrome.\
+             C. returns the congratulation message as well as the number of earned points for this round and total score if the entered word is a palindrome.
 * GET-method: http://localhost:8080/palindromme/scores
 \
             returns the total score table of all players sorted by the number of points (descending).
